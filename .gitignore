@@ -1,0 +1,17 @@
+# Generated builds and local diagnostics
+/bin/
+/outputs/
+/output/
+/tmp/
+/archive/
+*.app/
+*.dSYM/
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+*.p12
+*.p8
+*.mobileprovision
