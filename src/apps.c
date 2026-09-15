@@ -30,6 +30,7 @@ static const struct app_rule k_collection[] = {
   { "Chromium",        0xfff4f0e6u, "atelier-chrome" },
   { "Safari", 0xff268ed8u, "atelier-safari" },
   { "Firefox", 0xff643a9au, "atelier-firefox" },
+  { "Cursor", 0xff26251eu, "atelier-cursor" },
   { "Slack", 0xff542a52u, "atelier-slack" },
   { "zoom.us", 0xff2877ebu, "atelier-zoom" },
   { "Zoom", 0xff2877ebu, "atelier-zoom" },
@@ -71,7 +72,7 @@ static const char* k_default_conf =
   "#\n"
   "# Edit, then pick \"Reload app colours\" from the menu.\n"
   "\n"
-  "# 36 apps already have their own yarn and chart; see docs/COLLECTION.md.\n"
+  "# 37 apps already have their own yarn and chart; see docs/COLLECTION.md.\n"
   "# Uncomment to customize:\n"
   "# Claude = #D58561 atelier-claude\n";
 

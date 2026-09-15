@@ -23,10 +23,16 @@ Privacy & Security step is the supported route. From Terminal,
 `xattr -dr com.apple.quarantine "/Applications/Window Sweaters.app"` has the same
 effect before the first launch.
 
-The download is a universal binary covering Apple Silicon and Intel Macs. The app
-declares macOS 13 as its minimum; hands-on development has been on Apple Silicon and
-macOS 26. The Intel slice compiles and links but has not been run on Intel hardware,
-and compatibility with every supported macOS version is not verified.
+## What is supported
+
+**macOS 13 Ventura or later, on Apple Silicon or Intel.** The download is a universal
+binary and both slices are built against macOS 13.
+
+Hands-on development and testing have been on Apple Silicon running macOS 26. The Intel
+slice and macOS 13 through 15 are covered by the build but have not been exercised on
+that hardware. Window tracking uses private system APIs, so if something misbehaves on
+another release or machine, please open an issue and include your macOS version,
+hardware and display arrangement.
 
 ## Using it
 
@@ -57,7 +63,7 @@ Local builds are ad-hoc signed, not Developer ID signed or notarized.
 ![Eight apps shown in By App and Zigzag styles, with enlarged yarn details](docs/collection/styles-comparison.png)
 
 Eight favourite apps, each shown in **By App** and **Zigzag**, straight from the
-renderer at 12 pt. The [collection catalogue](docs/COLLECTION.md) shows all 36 app colourways and
+renderer at 12 pt. The [collection catalogue](docs/COLLECTION.md) shows all 37 app colourways and
 close-up yarn details. Unknown apps receive a consistent fallback colour; the
 app does not extract colours from icons. App names identify the inspiration and
 do not imply affiliation or endorsement.

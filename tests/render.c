@@ -461,7 +461,7 @@ static void verify_corners(void) {
         }
         CGContextRelease(actual); CGContextRelease(mask);
       }
-  puts("PASS: all 36 profiles, unchanged 10 pt width, all four opaque corners, square/rounded/clamped radii at 1x/2x");
+  puts("PASS: all 37 profiles, unchanged 10 pt width, all four opaque corners, square/rounded/clamped radii at 1x/2x");
 }
 
 // A contrasting test fabric exposes the exact patch boundary independently

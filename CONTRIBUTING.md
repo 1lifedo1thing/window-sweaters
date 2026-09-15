@@ -40,6 +40,10 @@ The display probe uses its own temporary window and a separate border connection
 
 Run the tests and manual checks on the intended macOS versions. Update both the
 bundle version in `AppInfo.plist` and command-line version in `src/main.c`.
+Release builds must keep `ARCHS` and `DEPLOY` in the Makefile: without an explicit
+`-mmacosx-version-min`, clang targets whatever macOS built it and the binary then
+refuses to launch below that version, no matter what `LSMinimumSystemVersion` says.
+Confirm with `vtool -show-build` that both slices report the intended `minos`.
 Distribution signing and notarization are not configured by the local build.
 Publish source with the license and attribution; do not upload local logs,
 archives, personal settings, build products or developer signing credentials.

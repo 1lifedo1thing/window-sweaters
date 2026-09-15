@@ -20,7 +20,7 @@
 
 #define MAJOR 1
 #define MINOR 4
-#define PATCH 28
+#define PATCH 29
 
 // Resolved via dlsym because of availability
 CFArrayRef (* JBSLSWindowIteratorGetCornerRadii)(CFTypeRef) = NULL;

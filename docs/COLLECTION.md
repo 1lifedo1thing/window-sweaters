@@ -1,6 +1,6 @@
 # The sweater collection
 
-36 app sweaters, individually inspected on 14 September 2026. Each plate shows a 10-point border, a 4x enlargement using that same stitch geometry, and four enlarged corners. Detail views reuse the renderer and cached yarn; they are not photographs or larger-gauge swatches.
+37 app sweaters. The original 36 were individually inspected on 14 September 2026; Cursor was added later that day. Each plate shows a 10-point border, a 4x enlargement using that same stitch geometry, and four enlarged corners. Detail views reuse the renderer and cached yarn; they are not photographs or larger-gauge swatches.
 
 This is a visual design review of the actual renderer, not a claim of perfect live behaviour in every app. The plates use a 10-point reference width; the app defaults to 12 points. WhatsApp uses textured, equal corner patches. Notes and Calendar have continuous curved cuffs instead. The rest have patterned corners.
 
@@ -48,6 +48,7 @@ Design rule: judge the 10-point border first. Use one clear pattern rhythm, app-
 | 34 | [Adobe Photoshop](#34-adobe-photoshop) | Pixel-frame checks |
 | 35 | [Adobe Illustrator](#35-adobe-illustrator) | Warm rugby stripes |
 | 36 | [Terminal](#36-terminal) | Sage stripes with matching knitted corners |
+| 37 | [Cursor](#37-cursor) | Quiet stone pinstripes |
 
 ## 01 Finder
 
@@ -336,3 +337,11 @@ Refined: symmetric rugby stripes remove clipped corner wedges. Orange bands are 
 Keep: sage and charcoal stripes are calm and clearly knitted. Fitted repeats give all four patterned corners a consistent construction.
 
 ![Terminal: window border, yarn detail and all four corners](collection/app-36.png)
+
+## 37 Cursor
+
+**Palette:** Warm charcoal, stone.
+
+Restrained stone pinstripes on warm charcoal, with raised yarn and fitted patterned corners. A quiet neutral knit without icon motifs or solid patches.
+
+![Cursor: window border, yarn detail and all four corners](collection/app-37.png)
