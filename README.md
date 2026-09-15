@@ -82,7 +82,7 @@ If you like setting things up from the command line, Window Sweaters also runs a
 
 ## Taking it off
 
-Quit Window Sweaters from the yarn icon first, then:
+Quit Window Sweaters from the yarn icon first. Then, if you installed it with Homebrew:
 
 ```sh
 brew uninstall --zap --cask window-sweaters
