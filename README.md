@@ -3,7 +3,7 @@
 A small native macOS menu-bar app that dresses your windows in knitted borders.
 Procedurally rendered yarn, app-inspired colourways, and a little warmth for your desktop.
 
-![A selection of window sweaters](docs/collection/collection-1.png)
+![Eight favourite apps in By App and Zigzag styles](docs/collection/styles-comparison.png)
 
 ## Install
 
