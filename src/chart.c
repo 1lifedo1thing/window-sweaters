@@ -94,9 +94,9 @@ static const struct collection_chart k_collection[] = {
       "..bb....bb..", "...bb....bb.", "....b.....b." },
     { 0xffff873eu, 0xffffc167u } },
   { "atelier-cursor", {
-      ".....aa.....", ".....aa.....", ".....aa.....",
-      ".....aa.....", ".....aa.....", ".....aa....." },
-    { 0xff8c8b83u } },
+      "a....aa....a", "aa........aa", ".aa......aa.",
+      "..aa....aa..", "...aa..aa...", "....aaaa...." },
+    { 0xffc4c2b9u } },
   { "atelier-slack", {
       ".a......b...", "aaa....bbb..", ".a......b...",
       "....c......d", "...ccc....dd", "....c......d" },
@@ -271,8 +271,7 @@ static void load_collection(void) {
         if (pixels[cell] == chart->cuff_color) pixels[cell] = 0;
     }
     chart->round_dots = strcmp(spec->name, "atelier-messages") == 0;
-    chart->fitted_repeat = strcmp(spec->name, "atelier-cursor") == 0
-                         || strcmp(spec->name, "atelier-finder") == 0
+    chart->fitted_repeat = strcmp(spec->name, "atelier-finder") == 0
                          || strcmp(spec->name, "atelier-terminal") == 0
                          || strcmp(spec->name, "atelier-grok") == 0
                          || strcmp(spec->name, "atelier-granola") == 0

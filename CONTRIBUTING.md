@@ -21,7 +21,10 @@ Do not run live-window probes unattended: they create visible temporary windows.
 ## Visual changes
 
 Use `make catalogue` to inspect full windows and enlarged corners, plus 1x/2x
-renderer checks from `make test`. Keep the SVG and native status-icon geometry
+renderer checks from `make test`. When adding an app, update its rule, chart, catalogue metadata, collection count
+checks, public collection page, and both PDF catalogues. Catalogue exports must
+use built-in profiles without loading personal settings or PNG overrides.
+Keep the SVG and native status-icon geometry
 in sync. Use original artwork; do not add third-party reference images without
 appropriate permission.
 

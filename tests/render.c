@@ -282,8 +282,8 @@ static void individual_review(const char* directory) {
 static void catalogue_preview(const char* directory, bool revised) {
   const int selected[] = {1, 3, 8, 14, 20, 28, 34};
   const int starts[] = {0, 8, 15, 22, 29, CATALOGUE_COUNT};
-  const char* titles[] = {"The favourites / 01", "The favourites / 02",
-    "Twenty new sweaters / 01", "Twenty new sweaters / 02", "Twenty new sweaters / 03"};
+  const char* titles[] = {"The collection / 01", "The collection / 02",
+    "The collection / 03", "The collection / 04", "The collection / 05"};
   knit_charts_load(NULL);
   for (int page = 0; page < (revised ? 1 : 5); page++) {
     CGContextRef c = canvas(1120, 1370, 2);

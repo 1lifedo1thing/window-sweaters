@@ -1,347 +1,355 @@
 # The sweater collection
 
-37 app sweaters. The original 36 were individually inspected on 14 September 2026; Cursor was added later that day. Each plate shows a 10-point border, a 4x enlargement using that same stitch geometry, and four enlarged corners. Detail views reuse the renderer and cached yarn; they are not photographs or larger-gauge swatches.
+37 app-inspired colourways, rendered by Window Sweaters. Choose **Pattern → By App** to give each app its own sweater, or **Zigzag** for a shared pattern in each app’s base colour.
 
-This is a visual design review of the actual renderer, not a claim of perfect live behaviour in every app. The plates use a 10-point reference width; the app defaults to 12 points. WhatsApp uses textured, equal corner patches. Notes and Calendar have continuous curved cuffs instead. The rest have patterned corners.
+[Download the By App catalogue](catalogues/Window-Sweaters-Catalogue.pdf) · [Download the Zigzag catalogue](catalogues/Window-Sweaters-Zigzag-Catalogue.pdf)
 
-Review scope: all 36 individual plates at one reference window size. Automated coverage checks also exercise 1x/2x and varied radii. This is not visual certification of every window size or live app. Mitred seams remain visible on some complex motifs; Messages uses a flatter dot-preserving material.
+The PDFs show the default **12 pt width and six stitch rows**. The reference plates below use 10 pt borders and include enlarged yarn and all four corners. All collection images use the actual app renderer and built-in colourways, without personal overrides.
 
-Design rule: judge the 10-point border first. Use one clear pattern rhythm, app-inspired colour proportions and visible yarn. Keep patches exceptional. Preserve successful designs instead of changing shared shading to solve one app.
+## Design notes
+
+Visible knitted stitches, restrained colour palettes, and familiar sweater patterns connect the collection. Some designs share a pattern: Spotify and Notion use checks; Teams, Cursor, Codex, and ChatGPT use zigzags. Codex and ChatGPT intentionally share the same colourway.
+
+Most corners continue the pattern. WhatsApp uses textured corner patches; Notes and Calendar have curved outer cuffs. Stitch direction changes and partial motifs can remain visible at corner joins, especially when enlarged. The images show a reference window size, not a guarantee of identical joins at every size.
+
+Global Zigzag keeps the app’s base colour and uses a shared soft pink contrast yarn. It is separate from the custom zigzag colourways in By App mode. Apps with the same base colour can look identical in global Zigzag.
+
+App names describe colour inspiration and do not imply affiliation or endorsement.
 
 ## Browse the collection
 
-| Page | App | Treatment |
+| App | Palette | Pattern |
 | --- | --- | --- |
-| 01 | [Finder](#01-finder) | Blue checks with aligned knitted corners |
-| 02 | [Microsoft Teams](#02-microsoft-teams) | Soft porcelain zigzags on violet knit |
-| 03 | [Claude](#03-claude) | Cream stars on apricot wool, no inner trim |
-| 04 | [Codex](#04-codex) | Cream chevrons on blue knit, patterned corners |
-| 05 | [Spotify](#05-spotify) | Raised knitted checks, patterned corners |
-| 06 | [Notion](#06-notion) | Raised ivory and charcoal knitted checks |
-| 07 | [WhatsApp](#07-whatsapp) | Broad stripes with pink accents, green corners |
-| 08 | [Figma](#08-figma) | Playful colour blocks |
-| 09 | [Google Chrome](#09-google-chrome) | Ivory knit with colourful checks |
-| 10 | [Paper](#10-paper) | Layered sheet motifs |
-| 11 | [ChatGPT](#11-chatgpt) | Cream chevrons on blue knit, patterned corners |
-| 12 | [Grok Bot](#12-grok-bot) | Framed stripes, matching knitted corners |
-| 13 | [Discord](#13-discord) | Mini checkerboard |
-| 14 | [Granola](#14-granola) | Grey and green stripes, patterned corners |
-| 15 | [Ghostty](#15-ghostty) | Quiet ivory stripes |
-| 16 | [Safari](#16-safari) | Compass diamonds |
-| 17 | [Firefox](#17-firefox) | Flame chevrons |
-| 18 | [Slack](#18-slack) | Confetti crosses |
-| 19 | [Zoom](#19-zoom) | Linked little windows |
-| 20 | [Telegram](#20-telegram) | Folded diagonal ribbons |
-| 21 | [Messages](#21-messages) | Scattered polka dots |
-| 22 | [Mail](#22-mail) | Envelope scallops |
-| 23 | [Notes](#23-notes) | Ivory knit with a continuous curved golden cuff |
-| 24 | [Calendar](#24-calendar) | White knit with a continuous curved red cuff |
-| 25 | [Reminders](#25-reminders) | Tiny task stitches |
-| 26 | [Apple Music](#26-apple-music) | Syncopated rose zigzags |
-| 27 | [Photos](#27-photos) | Rainbow posies |
-| 28 | [Preview](#28-preview) | Alpine photo frames |
-| 29 | [Microsoft Word](#29-microsoft-word) | Classic two-tone chevrons |
-| 30 | [Microsoft Excel](#30-microsoft-excel) | Workbook windowpane |
-| 31 | [Microsoft PowerPoint](#31-microsoft-powerpoint) | Nested presentation tiles |
-| 32 | [Microsoft Outlook](#32-microsoft-outlook) | Overlapping envelope checks |
-| 33 | [VS Code](#33-vs-code) | Angular linked ribbons |
-| 34 | [Adobe Photoshop](#34-adobe-photoshop) | Pixel-frame checks |
-| 35 | [Adobe Illustrator](#35-adobe-illustrator) | Warm rugby stripes |
-| 36 | [Terminal](#36-terminal) | Sage stripes with matching knitted corners |
-| 37 | [Cursor](#37-cursor) | Quiet stone pinstripes |
+| [Finder](#01-finder) | Finder blue, ice blue, navy | Blue checks with aligned knitted corners |
+| [Microsoft Teams](#02-microsoft-teams) | Violet, porcelain | Soft porcelain zigzags on violet knit |
+| [Claude](#03-claude) | Apricot, vanilla | Cream stars on apricot wool, no inner trim |
+| [Codex](#04-codex) | Blue, cream | Cream chevrons on blue knit, patterned corners |
+| [Spotify](#05-spotify) | Leaf green, butter yellow | Raised knitted checks, patterned corners |
+| [Notion](#06-notion) | Paper white, charcoal | Raised ivory and charcoal knitted checks |
+| [WhatsApp](#07-whatsapp) | Meadow, pistachio, pink | Broad stripes with pink accents, green corners |
+| [Figma](#08-figma) | Mauve and pastel accents | Playful colour blocks |
+| [Google Chrome](#09-google-chrome) | Ivory, red, green, yellow, blue | Ivory knit with colourful checks |
+| [Paper](#10-paper) | Paper blue, white, denim | Layered sheet motifs |
+| [ChatGPT](#11-chatgpt) | Blue, cream | Cream chevrons on blue knit, patterned corners |
+| [Grok Bot](#12-grok-bot) | Charcoal, oatmeal, silver | Framed stripes, matching knitted corners |
+| [Discord](#13-discord) | Blurple, warm white | Mini checkerboard |
+| [Granola](#14-granola) | Deep grey, leaf green | Grey and green stripes, patterned corners |
+| [Ghostty](#15-ghostty) | Midnight, soft ivory | Quiet ivory stripes |
+| [Safari](#16-safari) | Sky blue, porcelain, coral | Compass diamonds |
+| [Firefox](#17-firefox) | Violet, tangerine, golden peach | Flame chevrons |
+| [Slack](#18-slack) | Aubergine, blue, mint, gold, pink | Confetti crosses |
+| [Zoom](#19-zoom) | Cobalt, ice blue, white | Linked little windows |
+| [Telegram](#20-telegram) | Sky blue, white, glacier | Folded diagonal ribbons |
+| [Messages](#21-messages) | Apple green, white, pale lime | Scattered polka dots |
+| [Mail](#22-mail) | Azure, white, powder blue | Envelope scallops |
+| [Notes](#23-notes) | Vanilla, golden yellow | Ivory knit with a continuous curved golden cuff |
+| [Calendar](#24-calendar) | Paper white, tomato | White knit with a continuous curved red cuff |
+| [Reminders](#25-reminders) | Paper, blue, coral, orange, grey | Tiny task stitches |
+| [Apple Music](#26-apple-music) | Watermelon, ballet pink, cream | Syncopated rose zigzags |
+| [Photos](#27-photos) | Cream and six petal colours | Rainbow posies |
+| [Preview](#28-preview) | Denim, glacier, snow | Alpine photo frames |
+| [Microsoft Word](#29-microsoft-word) | Book blue, cornflower, paper | Classic two-tone chevrons |
+| [Microsoft Excel](#30-microsoft-excel) | Forest, sage, pale mint | Workbook windowpane |
+| [Microsoft PowerPoint](#31-microsoft-powerpoint) | Terracotta, salmon, peach | Nested presentation tiles |
+| [Microsoft Outlook](#32-microsoft-outlook) | Outlook blue, sky, white | Overlapping envelope checks |
+| [VS Code](#33-vs-code) | Code blue, deep ink, ice | Angular linked ribbons |
+| [Adobe Photoshop](#34-adobe-photoshop) | Midnight, cyan, soft blue | Pixel-frame checks |
+| [Adobe Illustrator](#35-adobe-illustrator) | Espresso, orange, apricot | Warm rugby stripes |
+| [Terminal](#36-terminal) | Charcoal green, soft sage | Sage stripes with matching knitted corners |
+| [Cursor](#37-cursor) | Warm charcoal, stone | Soft stone zigzags on charcoal knit |
 
 ## 01 Finder
 
+Blue checks with aligned knitted corners.
+
 **Palette:** Finder blue, ice blue, navy.
 
-Keep: clear blue hierarchy and readable checks. Patterned corners are balanced; individual stitches still change direction at the mitres.
-
-![Finder: window border, yarn detail and all four corners](collection/app-01.png)
+![Finder: window border, enlarged yarn and all four corners](collection/app-01.png)
 
 ## 02 Microsoft Teams
 
+Soft porcelain zigzags on violet knit.
+
 **Palette:** Violet, porcelain.
 
-The menu’s Zigzag repeat in violet and porcelain, with visible yarn and patterned corners.
-
-![Microsoft Teams: window border, yarn detail and all four corners](collection/app-02.png)
+![Microsoft Teams: window border, enlarged yarn and all four corners](collection/app-02.png)
 
 ## 03 Claude
 
+Cream stars on apricot wool, no inner trim.
+
 **Palette:** Apricot, vanilla.
 
-Simplified: removed the pale rose inner trim that formed an angular corner line. Cream stars remain on apricot wool, with patterned corners.
-
-![Claude: window border, yarn detail and all four corners](collection/app-03.png)
+![Claude: window border, enlarged yarn and all four corners](collection/app-03.png)
 
 ## 04 Codex
 
+Cream chevrons on blue knit, patterned corners.
+
 **Palette:** Blue, cream.
 
-Blue knit with cream chevrons; the pink accent is removed. No patches. Enlarged corners reveal cut motifs, so these are not seamless knitted turns.
-
-![Codex: window border, yarn detail and all four corners](collection/app-04.png)
+![Codex: window border, enlarged yarn and all four corners](collection/app-04.png)
 
 ## 05 Spotify
 
+Raised knitted checks, patterned corners.
+
 **Palette:** Leaf green, butter yellow.
 
-Keep as the tactile reference: clear green-and-butter checks and rounded yarn. Preserve the loved design despite small mitred fragments.
-
-![Spotify: window border, yarn detail and all four corners](collection/app-05.png)
+![Spotify: window border, enlarged yarn and all four corners](collection/app-05.png)
 
 ## 06 Notion
 
+Raised ivory and charcoal knitted checks.
+
 **Palette:** Paper white, charcoal.
 
-Spotify’s raised knitted checks in paper white and charcoal, with the same stitch scale and patterned corners. No cuff or solid corner patches.
-
-![Notion: window border, yarn detail and all four corners](collection/app-06.png)
+![Notion: window border, enlarged yarn and all four corners](collection/app-06.png)
 
 ## 07 WhatsApp
 
+Broad stripes with pink accents, green corners.
+
 **Palette:** Meadow, pistachio, pink.
 
-Keep: broad pistachio stripes and small pink accents on green. Corner patches are deliberate; the cap joins remain visible close up.
-
-![WhatsApp: window border, yarn detail and all four corners](collection/app-07.png)
+![WhatsApp: window border, enlarged yarn and all four corners](collection/app-07.png)
 
 ## 08 Figma
 
+Playful colour blocks.
+
 **Palette:** Mauve and pastel accents.
 
-Keep: mauve unifies the pastel blocks. Colour changes at the corners belong to the repeat; no flat caps were added.
-
-![Figma: window border, yarn detail and all four corners](collection/app-08.png)
+![Figma: window border, enlarged yarn and all four corners](collection/app-08.png)
 
 ## 09 Google Chrome
 
+Ivory knit with colourful checks.
+
 **Palette:** Ivory, red, green, yellow, blue.
 
-Spacious checks on ivory yarn, with red, green and yellow checks and occasional blue. Repeats fit the window edges. The pattern continues around all four corners without solid patches.
-
-![Google Chrome: window border, yarn detail and all four corners](collection/app-09.png)
+![Google Chrome: window border, enlarged yarn and all four corners](collection/app-09.png)
 
 ## 10 Paper
 
+Layered sheet motifs.
+
 **Palette:** Paper blue, white, denim.
 
-Keep: readable white sheet motifs on soft blue yarn. No patches. Motifs are clipped at the mitres but the silhouette stays clean.
-
-![Paper: window border, yarn detail and all four corners](collection/app-10.png)
+![Paper: window border, enlarged yarn and all four corners](collection/app-10.png)
 
 ## 11 ChatGPT
 
+Cream chevrons on blue knit, patterned corners.
+
 **Palette:** Blue, cream.
 
-Keep: matches Codex, with visible yarn and no patches. Complex chevrons still meet at mitred seams rather than bending continuously.
-
-![ChatGPT: window border, yarn detail and all four corners](collection/app-11.png)
+![ChatGPT: window border, enlarged yarn and all four corners](collection/app-11.png)
 
 ## 12 Grok Bot
 
+Framed stripes, matching knitted corners.
+
 **Palette:** Charcoal, oatmeal, silver.
 
-Keep: charcoal, oatmeal and silver give the stripes depth. Repeats align at the corners without separate solid caps.
-
-![Grok Bot: window border, yarn detail and all four corners](collection/app-12.png)
+![Grok Bot: window border, enlarged yarn and all four corners](collection/app-12.png)
 
 ## 13 Discord
 
+Mini checkerboard.
+
 **Palette:** Blurple, warm white.
 
-Keep: compact blurple-and-ivory checks. This is intentionally denser than Spotify; adding another motif would make it too busy.
-
-![Discord: window border, yarn detail and all four corners](collection/app-13.png)
+![Discord: window border, enlarged yarn and all four corners](collection/app-13.png)
 
 ## 14 Granola
 
+Grey and green stripes, patterned corners.
+
 **Palette:** Deep grey, leaf green.
 
-Refined: centred green stripes and fitted repeats remove the triangular corner fragments. Same grey-green palette; no patches.
-
-![Granola: window border, yarn detail and all four corners](collection/app-14.png)
+![Granola: window border, enlarged yarn and all four corners](collection/app-14.png)
 
 ## 15 Ghostty
 
+Quiet ivory stripes.
+
 **Palette:** Midnight, soft ivory.
 
-Keep: sparse ivory pinstripes on navy. Yarn is subtle in the dark areas but visible enlarged; avoid adding decorative noise.
-
-![Ghostty: window border, yarn detail and all four corners](collection/app-15.png)
+![Ghostty: window border, enlarged yarn and all four corners](collection/app-15.png)
 
 ## 16 Safari
 
+Compass diamonds.
+
 **Palette:** Sky blue, porcelain, coral.
 
-Keep: coral accents make the blue-and-cream diamonds distinctive. Corner cuts are visible enlarged but quiet at window size.
-
-![Safari: window border, yarn detail and all four corners](collection/app-16.png)
+![Safari: window border, enlarged yarn and all four corners](collection/app-16.png)
 
 ## 17 Firefox
 
+Flame chevrons.
+
 **Palette:** Violet, tangerine, golden peach.
 
-Keep: warm diagonal stitches on violet read clearly. The angled motif changes direction at the joins; no corner patches added.
-
-![Firefox: window border, yarn detail and all four corners](collection/app-17.png)
+![Firefox: window border, enlarged yarn and all four corners](collection/app-17.png)
 
 ## 18 Slack
 
+Confetti crosses.
+
 **Palette:** Aubergine, blue, mint, gold, pink.
 
-Keep: spaced colourwork on aubergine feels playful. Several accent colours work because the background remains dominant.
-
-![Slack: window border, yarn detail and all four corners](collection/app-18.png)
+![Slack: window border, enlarged yarn and all four corners](collection/app-18.png)
 
 ## 19 Zoom
 
+Linked little windows.
+
 **Palette:** Cobalt, ice blue, white.
 
-Keep: bright blue with repeated light window shapes. The small motifs are readable; corner seams remain visible under enlargement.
-
-![Zoom: window border, yarn detail and all four corners](collection/app-19.png)
+![Zoom: window border, enlarged yarn and all four corners](collection/app-19.png)
 
 ## 20 Telegram
 
+Folded diagonal ribbons.
+
 **Palette:** Sky blue, white, glacier.
 
-Keep: broad white diagonal ribbons give the blue border a clear rhythm. Mitred corners contain partial motifs.
-
-![Telegram: window border, yarn detail and all four corners](collection/app-20.png)
+![Telegram: window border, enlarged yarn and all four corners](collection/app-20.png)
 
 ## 21 Messages
 
+Scattered polka dots.
+
 **Palette:** Apple green, white, pale lime.
 
-Keep the clear polka-dot composition. Yarn is visibly flatter than the sculpted styles; a future material study should preserve the round dots.
-
-![Messages: window border, yarn detail and all four corners](collection/app-21.png)
+![Messages: window border, enlarged yarn and all four corners](collection/app-21.png)
 
 ## 22 Mail
 
+Envelope scallops.
+
 **Palette:** Azure, white, powder blue.
 
-Keep: a quiet white wave on blue, with visible knitted strands. The thin inner light edge reads more like trim than the chunkier sweaters.
-
-![Mail: window border, yarn detail and all four corners](collection/app-22.png)
+![Mail: window border, enlarged yarn and all four corners](collection/app-22.png)
 
 ## 23 Notes
 
+Ivory knit with a continuous curved golden cuff.
+
 **Palette:** Vanilla, golden yellow.
 
-Simplified: cream wool with a continuous golden cuff. All graphite stitches removed; curved corners remain knitted and unpatched.
-
-![Notes: window border, yarn detail and all four corners](collection/app-23.png)
+![Notes: window border, enlarged yarn and all four corners](collection/app-23.png)
 
 ## 24 Calendar
 
+White knit with a continuous curved red cuff.
+
 **Palette:** Paper white, tomato.
 
-Simplified: white wool with a continuous red cuff. All dark stitches removed; curved corners remain knitted and unpatched.
-
-![Calendar: window border, yarn detail and all four corners](collection/app-24.png)
+![Calendar: window border, enlarged yarn and all four corners](collection/app-24.png)
 
 ## 25 Reminders
 
+Tiny task stitches.
+
 **Palette:** Paper, blue, coral, orange, grey.
 
-Keep: restrained coloured stitches on white wool. The small accents leave enough breathing room; corner fragments are minor.
-
-![Reminders: window border, yarn detail and all four corners](collection/app-25.png)
+![Reminders: window border, enlarged yarn and all four corners](collection/app-25.png)
 
 ## 26 Apple Music
 
+Syncopated rose zigzags.
+
 **Palette:** Watermelon, ballet pink, cream.
 
-Keep: related pinks and a little cream create a coherent diagonal rhythm. No patches or additional shadows needed.
-
-![Apple Music: window border, yarn detail and all four corners](collection/app-26.png)
+![Apple Music: window border, enlarged yarn and all four corners](collection/app-26.png)
 
 ## 27 Photos
 
+Rainbow posies.
+
 **Palette:** Cream and six petal colours.
 
-Keep: soft rainbow colourwork on cream. This is a busier member of the collection; the light palette keeps it gentle.
-
-![Photos: window border, yarn detail and all four corners](collection/app-27.png)
+![Photos: window border, enlarged yarn and all four corners](collection/app-27.png)
 
 ## 28 Preview
 
+Alpine photo frames.
+
 **Palette:** Denim, glacier, snow.
 
-Keep: denim, glacier and snow form a readable alpine repeat. Layered stitches provide detail without extra outlines.
-
-![Preview: window border, yarn detail and all four corners](collection/app-28.png)
+![Preview: window border, enlarged yarn and all four corners](collection/app-28.png)
 
 ## 29 Microsoft Word
 
+Classic two-tone chevrons.
+
 **Palette:** Book blue, cornflower, paper.
 
-Keep: classic blue chevrons and visible yarn. The mitres clip the motif, but there are no speech loops or solid corner caps.
-
-![Microsoft Word: window border, yarn detail and all four corners](collection/app-29.png)
+![Microsoft Word: window border, enlarged yarn and all four corners](collection/app-29.png)
 
 ## 30 Microsoft Excel
 
+Workbook windowpane.
+
 **Palette:** Forest, sage, pale mint.
 
-Keep: forest-and-mint windowpane has a clear geometric rhythm. Patterned joins remain visible enlarged.
-
-![Microsoft Excel: window border, yarn detail and all four corners](collection/app-30.png)
+![Microsoft Excel: window border, enlarged yarn and all four corners](collection/app-30.png)
 
 ## 31 Microsoft PowerPoint
 
+Nested presentation tiles.
+
 **Palette:** Terracotta, salmon, peach.
 
-Keep: terracotta and peach blocks feel warm and knitted. Small pale fragments occur near the joins; no added patches.
-
-![Microsoft PowerPoint: window border, yarn detail and all four corners](collection/app-31.png)
+![Microsoft PowerPoint: window border, enlarged yarn and all four corners](collection/app-31.png)
 
 ## 32 Microsoft Outlook
 
+Overlapping envelope checks.
+
 **Palette:** Outlook blue, sky, white.
 
-Keep: blue checks are crisp at window size. Good colour hierarchy; the corner seam changes stitch direction.
-
-![Microsoft Outlook: window border, yarn detail and all four corners](collection/app-32.png)
+![Microsoft Outlook: window border, enlarged yarn and all four corners](collection/app-32.png)
 
 ## 33 VS Code
 
+Angular linked ribbons.
+
 **Palette:** Code blue, deep ink, ice.
 
-Keep: angular blue colourwork on deep ink. Small light stitches remain legible; more motifs would overload the narrow border.
-
-![VS Code: window border, yarn detail and all four corners](collection/app-33.png)
+![VS Code: window border, enlarged yarn and all four corners](collection/app-33.png)
 
 ## 34 Adobe Photoshop
 
+Pixel-frame checks.
+
 **Palette:** Midnight, cyan, soft blue.
 
-Keep: cyan checks have strong identity on midnight wool. Dark yarn is subdued, not absent; avoid brightening the whole palette.
-
-![Adobe Photoshop: window border, yarn detail and all four corners](collection/app-34.png)
+![Adobe Photoshop: window border, enlarged yarn and all four corners](collection/app-34.png)
 
 ## 35 Adobe Illustrator
 
+Warm rugby stripes.
+
 **Palette:** Espresso, orange, apricot.
 
-Refined: symmetric rugby stripes remove clipped corner wedges. Orange bands are slightly narrower, with apricot separators and no patches.
-
-![Adobe Illustrator: window border, yarn detail and all four corners](collection/app-35.png)
+![Adobe Illustrator: window border, enlarged yarn and all four corners](collection/app-35.png)
 
 ## 36 Terminal
 
+Sage stripes with matching knitted corners.
+
 **Palette:** Charcoal green, soft sage.
 
-Keep: sage and charcoal stripes are calm and clearly knitted. Fitted repeats give all four patterned corners a consistent construction.
-
-![Terminal: window border, yarn detail and all four corners](collection/app-36.png)
+![Terminal: window border, enlarged yarn and all four corners](collection/app-36.png)
 
 ## 37 Cursor
 
+Soft stone zigzags on charcoal knit.
+
 **Palette:** Warm charcoal, stone.
 
-Restrained stone pinstripes on warm charcoal, with raised yarn and fitted patterned corners. A quiet neutral knit without icon motifs or solid patches.
-
-![Cursor: window border, yarn detail and all four corners](collection/app-37.png)
+![Cursor: window border, enlarged yarn and all four corners](collection/app-37.png)

@@ -5,23 +5,30 @@ Procedurally rendered yarn, app-inspired colourways, and a little warmth for you
 
 ![Four overlapping windows edged with knitted borders in green, blue and rust colourways](docs/hero.jpg)
 
+*Stylized promotional mockup. See the actual rendered borders in [Sweaters](#sweaters).*
+
 ## Install
 
-Download `WindowSweaters-<version>.zip` from [Releases](../../releases), unzip it, and move
-**Window Sweaters.app** to your Applications folder.
+With [Homebrew](https://brew.sh):
 
-The app is ad-hoc signed rather than notarized by Apple, so macOS blocks it on the
-first launch. To allow it:
+```sh
+brew trust saragordic/tap
+brew install --cask --no-quarantine saragordic/tap/window-sweaters
+```
 
-1. Double-click the app. macOS refuses to open it.
-2. Open **System Settings → Privacy & Security**, scroll to Security, and click
-   **Open Anyway** for Window Sweaters.
-3. Confirm. The choice is remembered, and later launches open normally.
+That skips the security prompt described below. Homebrew requires the trust step
+for any third-party tap.
 
-On macOS 15 and later, Control-clicking the app no longer bypasses this, so the
-Privacy & Security step is the supported route. From Terminal,
-`xattr -dr com.apple.quarantine "/Applications/Window Sweaters.app"` has the same
-effect before the first launch.
+Otherwise download `WindowSweaters-<version>.zip` from [Releases](../../releases),
+unzip it, and move **Window Sweaters.app** to your Applications folder.
+
+The app is ad-hoc signed and is not notarized by Apple. If macOS blocks the first launch:
+
+1. Try opening **Window Sweaters.app** once.
+2. Open **System Settings → Privacy & Security** and find the blocked-app message.
+3. Click **Open Anyway**, then confirm.
+
+See [Apple’s instructions for opening an unnotarized app](https://support.apple.com/en-us/102445).
 
 ## What is supported
 
@@ -46,9 +53,11 @@ this app does not need Full Disk Access.
 
 ## Build from source
 
-Requires Apple's Command Line Tools (`xcode-select --install`).
+Requires Apple's Command Line Tools (`xcode-select --install`) and Python 3 for the local installer.
 
 ```sh
+git clone https://github.com/saragordic/window-sweaters.git
+cd window-sweaters
 ./scripts/build-app.sh
 python3 scripts/install-local.py
 ```
@@ -64,7 +73,10 @@ Local builds are ad-hoc signed, not Developer ID signed or notarized.
 
 Eight favourite apps, each shown in **By App** and **Zigzag**, straight from the
 renderer at 12 pt. The [collection catalogue](docs/COLLECTION.md) shows all 37 app colourways and
-close-up yarn details. Unknown apps receive a consistent fallback colour; the
+close-up yarn details. Download the [By App PDF](docs/catalogues/Window-Sweaters-Catalogue.pdf)
+or [Zigzag PDF](docs/catalogues/Window-Sweaters-Zigzag-Catalogue.pdf) to browse offline.
+
+Unknown apps receive a consistent fallback colour; the
 app does not extract colours from icons. App names identify the inspiration and
 do not imply affiliation or endorsement.
 

@@ -38,6 +38,6 @@ static const struct catalogue_entry catalogue[] = {
   { "Adobe Photoshop", "Adobe Photoshop", "atelier-photoshop", "Midnight, cyan, soft blue", "Pixel-frame checks" },
   { "Adobe Illustrator", "Adobe Illustrator", "atelier-illustrator", "Espresso, orange, apricot", "Warm rugby stripes" },
   { "Terminal", "Terminal", "atelier-terminal", "Charcoal green, soft sage", "Sage stripes with matching knitted corners" },
-  { "Cursor", "Cursor", "atelier-cursor", "Warm charcoal, stone", "Quiet stone pinstripes on charcoal knit" },
+  { "Cursor", "Cursor", "atelier-cursor", "Warm charcoal, stone", "Soft stone zigzags on charcoal knit" },
 };
 enum { CATALOGUE_COUNT = sizeof catalogue / sizeof catalogue[0] };
