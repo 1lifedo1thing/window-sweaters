@@ -80,6 +80,25 @@ Names match app-name prefixes, ignoring capitalisation; the longest match wins. 
 
 If you like setting things up from the command line, Window Sweaters also runs an optional shell script at startup, if you have one at `~/.config/window-sweaters/sweatersrc` or `~/.sweatersrc`.
 
+## Taking it off
+
+Quit Window Sweaters from the yarn icon first, then:
+
+```sh
+brew uninstall --zap --cask window-sweaters
+```
+
+`--zap` also removes your saved colourways. Leave it off to keep them for later.
+
+If you installed it by hand, drag **Window Sweaters.app** to the Trash, then delete these if you want everything gone:
+
+```text
+~/Library/Application Support/Knit Borders
+~/Library/Preferences/local.knitborders.app.plist
+```
+
+macOS remembers the Accessibility permission separately, so remove Window Sweaters from **System Settings → Privacy & Security → Accessibility** too.
+
 ## Contributing
 
 ```sh
