@@ -1,60 +1,56 @@
 # Window Sweaters
 
-A small native macOS menu-bar app that dresses your windows in knitted borders.
-Procedurally rendered yarn, app-inspired colourways, and a little warmth for your desktop.
+A little Mac app I made to give my windows sweaters. 🧶
+Knitted borders, colours inspired by your favourite apps, and a cosier desktop.
 
 ![Four overlapping windows edged with knitted borders in green, blue and rust colourways](docs/hero.jpg)
 
-*Stylized promotional mockup. See the actual rendered borders in [Sweaters](#sweaters).*
+## Get it
 
-## Install
+You can just send this repo to your coding agent and ask it to install Window Sweaters for you:
 
-With [Homebrew](https://brew.sh):
+> Install Window Sweaters on my Mac: https://github.com/saragordic/window-sweaters
+
+Or install it yourself with [Homebrew](https://brew.sh):
 
 ```sh
 brew trust saragordic/tap
 brew install --cask saragordic/tap/window-sweaters
 ```
 
-This opens with no security prompt, including with a custom `--appdir`. Homebrew
-requires the trust step for any third-party tap. If macOS does still ask, follow
-the approval steps below.
+Then open **Window Sweaters** from your Applications folder.
 
-Otherwise download `WindowSweaters-<version>.zip` from [Releases](../../releases),
-unzip it, and move **Window Sweaters.app** to your Applications folder.
+You can also grab the latest ZIP from [Releases](https://github.com/saragordic/window-sweaters/releases), unzip it, and drag **Window Sweaters.app** into Applications.
 
-The app is ad-hoc signed and is not notarized by Apple. If macOS blocks the first launch:
+If macOS blocks it, open **System Settings → Privacy & Security → Open Anyway** after trying to launch it. The app isn't notarized by Apple yet. [Apple's instructions](https://support.apple.com/en-us/102445) explain this step.
 
-1. Try opening **Window Sweaters.app** once.
-2. Open **System Settings → Privacy & Security** and find the blocked-app message.
-3. Click **Open Anyway**, then confirm.
+## Make yourself cosy
 
-See [Apple’s instructions for opening an unnotarized app](https://support.apple.com/en-us/102445).
+Click the yarn icon in your menu bar to change the style, pattern, border width, and stitch size. You can also pause the sweaters or quit from there.
 
-## What is supported
+**By App** gives each app its own sweater. **Zigzag** gives them all a softer, matching pattern in their own colours. Try both and see what you like.
 
-**macOS 13 Ventura or later, on Apple Silicon or Intel.** The download is a universal
-binary and both slices are built against macOS 13.
+If macOS asks for Accessibility access, enable Window Sweaters in **System Settings → Privacy & Security → Accessibility** so it can follow which window is focused.
 
-Hands-on development and testing have been on Apple Silicon running macOS 26. The Intel
-slice and macOS 13 through 15 are covered by the build but have not been exercised on
-that hardware. Window tracking uses private system APIs, so if something misbehaves on
-another release or machine, please open an issue and include your macOS version,
-hardware and display arrangement.
+## The sweaters
 
-## Using it
+![Eight apps shown in By App and Zigzag styles, with enlarged yarn details](docs/collection/styles-comparison.png)
 
-Open the yarn icon in the menu bar to change patterns, border width and stitch
-size, pause sweaters, or quit. New installations use **12 pt borders**, six stitch
-rows, and **Pattern → By App**. Your saved choices take precedence.
+Some of my favourites, in By App and Zigzag. You can see the whole collection and close-up stitches in the [catalogue](docs/COLLECTION.md), or download the [By App PDF](docs/catalogues/Window-Sweaters-Catalogue.pdf) and [Zigzag PDF](docs/catalogues/Window-Sweaters-Zigzag-Catalogue.pdf).
 
-If macOS requests Accessibility access, enable the app in System Settings →
-Privacy & Security → Accessibility. That permission supports focus detection;
-this app does not need Full Disk Access.
+The app colours are picked by hand. Apps without their own sweater still get a border with an automatically chosen colour.
 
-## Build from source
+## A little work in progress
 
-Requires Apple's Command Line Tools (`xcode-select --install`) and Python 3 for the local installer.
+I built this on my Mac and use it myself, but there are still rough edges. Borders hide while you resize a window and return when you're done.
+
+The app is built for **macOS 13 or later, on Apple Silicon and Intel**. I've tested it on Apple Silicon with macOS 26; older macOS versions and Intel Macs haven't had the same hands-on testing. It uses private macOS window APIs, so system updates may affect how it works.
+
+If something looks wrong, [open an issue](https://github.com/saragordic/window-sweaters/issues) and tell me your macOS version, Mac model, and whether you're using another screen. Reproduction steps help a lot.
+
+## Build it yourself
+
+You'll need Apple's Command Line Tools (`xcode-select --install`) and Python 3.
 
 ```sh
 git clone https://github.com/saragordic/window-sweaters.git
@@ -63,73 +59,35 @@ cd window-sweaters
 python3 scripts/install-local.py
 ```
 
-The build creates `outputs/Window Sweaters.app`. The installer puts one copy in
-`~/Applications/Window Sweaters.app` and opens it. It replaces only this app or
-its previous **Knit Borders** installation, with a backup in the temporary folder.
-Local builds are ad-hoc signed, not Developer ID signed or notarized.
+This builds `outputs/Window Sweaters.app`, installs it in `~/Applications`, and opens it. The installer backs up any previous local installation before replacing it.
 
-## Sweaters
+## Your own colourways
 
-![Eight apps shown in By App and Zigzag styles, with enlarged yarn details](docs/collection/styles-comparison.png)
-
-Eight favourite apps, each shown in **By App** and **Zigzag**, straight from the
-renderer at 12 pt. The [collection catalogue](docs/COLLECTION.md) shows all 37 app colourways and
-close-up yarn details. Download the [By App PDF](docs/catalogues/Window-Sweaters-Catalogue.pdf)
-or [Zigzag PDF](docs/catalogues/Window-Sweaters-Zigzag-Catalogue.pdf) to browse offline.
-
-Unknown apps receive a consistent fallback colour; the
-app does not extract colours from icons. App names identify the inspiration and
-do not imply affiliation or endorsement.
-
-The monochrome [yarn icon](assets/yarn-menu-icon.svg) uses a native AppKit template
-so its tint follows the menu bar's appearance.
-
-## Current limitations
-
-Window Sweaters and [JankyBorders](https://github.com/FelixKratz/JankyBorders) can be
-installed side by side, but running both at once means two sets of borders on the same
-windows. Quit one before starting the other. Window Sweaters reads its own optional
-config from `~/.config/window-sweaters/sweatersrc` and never JankyBorders' `bordersrc`.
-
-This is an experimental desktop utility. Window tracking uses private SkyLight
-APIs, which may change between macOS releases. Borders deliberately hide during
-resizing and reappear when the window settles. Movement, stacking, display
-transfers and window lifecycles have automated coverage, but that does not
-establish perfect behaviour in every app, Space or display arrangement.
-
-## Personal colourways
-
-Advanced customisation is file-based for now. Edit the files below, then restart
-the app to load your changes.
-For compatibility, custom files remain in:
+If you'd like to experiment, edit these files and restart the app:
 
 ```text
 ~/Library/Application Support/Knit Borders/apps.conf
 ~/Library/Application Support/Knit Borders/charts/
 ```
 
-Example rule:
+The folder still uses the app's original name so existing settings keep working. For example, an app rule looks like this:
 
 ```text
 Claude = #D58561 atelier-claude
 ```
 
-Rules match process-name prefixes, case-insensitively; the longest matching rule
-wins. PNG charts can override built-in patterns. Built-ins need no external files.
-Your personal configuration is not included in this repository.
+Names match app-name prefixes, ignoring capitalisation; the longest match wins. You can also put your own PNG charts in the charts folder to replace built-in patterns.
 
-## Development
+## Contributing
 
 ```sh
-make test       # renderer, collection, tracking, lifecycle, focus and menu checks
-make catalogue  # regenerate the visual catalogue from the native renderer
-make bench     # renderer benchmark
+make test       # run the tests
+make catalogue  # render the sweater collection
+make bench     # benchmark the renderer
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for testing and compatibility conventions.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## Credits and license
 
-Built on [JankyBorders](https://github.com/FelixKratz/JankyBorders) by Felix Kratz.
-This project retains the existing [GNU GPL v3 license](LICENSE).
-See [NOTICE.md](NOTICE.md) for attribution.
+Built on [JankyBorders](https://github.com/FelixKratz/JankyBorders) by Felix Kratz, with thanks. Released under [GPL-3.0](LICENSE). See [NOTICE.md](NOTICE.md) for attribution.
