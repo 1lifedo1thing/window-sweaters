@@ -350,7 +350,7 @@ static void chrome_preview(const char* path) {
   CGContextSetRGBFillColor(c,.949,.937,.906,1);
   CGContextFillRect(c,CGRectMake(0,0,W,H));
   text_at(c,40,55,"A sweater for Chrome",29);
-  text_at(c,40,84,"Butter and sage stripes, little red accents, and a little blue.",14);
+  text_at(c,40,84,"Ivory yarn with red, green, yellow and occasional blue checks.",14);
   const struct app_rule* r = knit_app_rule("Google Chrome"); assert(r);
   CGRect win=CGRectMake(56,132,560,220);
   knit_draw(c,win,10,14,r->color,knit_chart_index(r->chart),0,1);
@@ -458,15 +458,6 @@ static void verify_corners(void) {
                            pixel(actual, points[0][0]*scale, points[0][1]*scale)));
           uint32_t corner = pixel(actual, 25*scale, 31*scale);
           assert((corner >> 24) == 255);
-        }
-        if (strcmp(catalogue[style].chart, "atelier-chrome") == 0 && n == 1) {
-          uint32_t yellow = pixel(actual, 25*scale, 31*scale);
-          assert((yellow >> 24) == 255);
-          assert(((yellow >> 16) & 255) > ((yellow >> 8) & 255));
-          assert(((yellow >> 8) & 255) > (yellow & 255));
-          assert(same_yarn(pixel(actual, 215*scale, 31*scale), yellow));
-          assert(same_yarn(pixel(actual, 25*scale, 139*scale), yellow));
-          assert(same_yarn(pixel(actual, 215*scale, 139*scale), yellow));
         }
         CGContextRelease(actual); CGContextRelease(mask);
       }

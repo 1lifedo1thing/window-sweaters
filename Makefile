@@ -3,11 +3,15 @@ CFILES = src/main.c src/parse.c src/mach.c src/hashtable.c src/events.c src/reco
 LIBS = -framework AppKit -framework Cocoa -framework CoreVideo \
        -F/System/Library/PrivateFrameworks/ -framework SkyLight
 
+# Released builds are universal so Intel Macs can run the download. Local
+# development targets (debug, tests, probes) stay native for build speed.
+ARCHS = -arch arm64 -arch x86_64
+
 .PHONY: all debug clean test preview catalogue bench
 
 all: | bin
-	clang -O3 -g -Isrc -fobjc-arc -c src/menubar.m -o bin/menubar.o
-	clang -std=c99 -O3 -g -Isrc $(CFILES) bin/menubar.o -o bin/borders $(LIBS)
+	clang $(ARCHS) -O3 -g -Isrc -fobjc-arc -c src/menubar.m -o bin/menubar.o
+	clang $(ARCHS) -std=c99 -O3 -g -Isrc $(CFILES) bin/menubar.o -o bin/borders $(LIBS)
 
 debug: | bin
 	clang -O0 -g -Isrc -fobjc-arc -c src/menubar.m -o bin/menubar.o

@@ -50,8 +50,8 @@ static const struct collection_chart k_collection[] = {
       "aaa.b..b.aaa", "aaa.b..b.aaa", "aaa.b..b.aaa" },
     { 0xffeeece4u, 0xff868a88u } },
   { "atelier-teams", {
-      "....aaaaaaaa....", "....aaaaaaaa....", "....aaaaaaaa....",
-      "aaaa........aaaa", "aaaa........aaaa", "aaaa........aaaa" },
+      "a....aa....a", "aa........aa", ".aa......aa.",
+      "..aa....aa..", "...aa..aa...", "....aaaa...." },
     { 0xfff4efeeu } },
   { "atelier-claude", {
       "............", "..a.....a...", ".aaa...aaa..",
@@ -66,8 +66,8 @@ static const struct collection_chart k_collection[] = {
       "aaa...aaa...", "aaa...aaa...", "aaa...aaa..." },
     { 0xffe5d586u } },
   { "atelier-notion", {
-      "aaaaaaaaaaaa", "aaaaaaaaaaaa", "............",
-      "............", "............", "............" },
+      "...aaa...aaa", "...aaa...aaa", "...aaa...aaa",
+      "aaa...aaa...", "aaa...aaa...", "aaa...aaa..." },
     { 0xff494947u } },
   { "atelier-whatsapp", {
       "aaaa....b...", "aaaa....b...", "aaaa....b...",
@@ -78,9 +78,9 @@ static const struct collection_chart k_collection[] = {
       "....ddee....", "....ddee....", "....ddee...." },
     { 0xffeaaf96u, 0xffdcd092u, 0xff8dbccfu, 0xffafc5a1u, 0xffded3e9u } },
   { "atelier-chrome", {
-      "aaaaaabbbbbb......", "aaaaaabbbbbb......", "aaccaabbccbb..cc..",
-      "aaccaabbccbb..cc..", "aaaaaabbbbbb......", "aaaaaabbbbbb......" },
-    { 0xffd8675bu, 0xff6ba776u, 0xff4285f4u } },
+      "....aaaaaaaa........bbbbbbbb........dddddddd........aaaaaaaa........bbbbbbbb........dddddddd........cccccccc....", "....aaaaaaaa........bbbbbbbb........dddddddd........aaaaaaaa........bbbbbbbb........dddddddd........cccccccc....", "....aaaaaaaa........bbbbbbbb........dddddddd........aaaaaaaa........bbbbbbbb........dddddddd........cccccccc....",
+      "aaaa........bbbbbbbb........dddddddd........aaaaaaaa........bbbbbbbb........dddddddd........cccccccc........aaaa", "aaaa........bbbbbbbb........dddddddd........aaaaaaaa........bbbbbbbb........dddddddd........cccccccc........aaaa", "aaaa........bbbbbbbb........dddddddd........aaaaaaaa........bbbbbbbb........dddddddd........cccccccc........aaaa" },
+    { 0xffd8675bu, 0xff6ba776u, 0xff4285f4u, 0xffedcc70u } },
   { "atelier-paper", {
       "..aaaa..", ".a...a..", ".a.b.a..",
       ".aaaaa..", ".aaa....", "........" },
@@ -171,8 +171,8 @@ static const struct collection_chart k_collection[] = {
     { 0xff8ba66au } },
   { "atelier-chatgpt", {
       "a....aa....a", "aa........aa", ".aa......aa.",
-      "..bb....bb..", "...bb..bb...", "....bbbb...." },
-    { 0xfff6f0deu, 0xfff078aau } },
+      "..aa....aa..", "...aa..aa...", "....aaaa...." },
+    { 0xfff6f0deu } },
   { "atelier-ghostty", {
       "aa..........", "aa..........", "aa..........",
       "aa..........", "aa..........", "aa.........." },
@@ -227,7 +227,6 @@ static const struct collection_chart k_collection[] = {
 // Solid patches finish patterns that otherwise collide at the mitre.
 // A zero colour follows the app's own base yarn, including personal palettes.
 static const struct { const char* chart; uint32_t color; } k_corner_styles[] = {
-  { "atelier-chrome", 0xffedcc70u }, // requested yellow finish
   { "atelier-whatsapp", 0 },       // keep its stripe joins quiet
 };
 
@@ -260,8 +259,7 @@ static void load_collection(void) {
         break;
       }
     if (strcmp(spec->name, "atelier-notes") == 0
-        || strcmp(spec->name, "atelier-calendar") == 0
-        || strcmp(spec->name, "atelier-notion") == 0) {
+        || strcmp(spec->name, "atelier-calendar") == 0) {
       // Move the outer cuff out of the rectangular chart: its coloured rows
       // otherwise repeat into the inner corner and make angular fragments.
       chart->cuff_color = spec->yarn[0];
@@ -274,7 +272,7 @@ static void load_collection(void) {
                          || strcmp(spec->name, "atelier-grok") == 0
                          || strcmp(spec->name, "atelier-granola") == 0
                          || strcmp(spec->name, "atelier-illustrator") == 0
-                         || strcmp(spec->name, "atelier-teams") == 0;
+                         || strcmp(spec->name, "atelier-chrome") == 0;
     chart->sculpted_yarn = !chart->round_dots;
     chart->defined_yarn = true;
   }

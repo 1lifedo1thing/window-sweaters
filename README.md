@@ -29,8 +29,10 @@ Privacy & Security step is the supported route. From Terminal,
 `xattr -dr com.apple.quarantine "/Applications/Window Sweaters.app"` has the same
 effect before the first launch.
 
-The app declares macOS 13 as its minimum; hands-on development has been on macOS 26.
-Compatibility with every supported macOS version is not verified.
+The download is a universal binary covering Apple Silicon and Intel Macs. The app
+declares macOS 13 as its minimum; hands-on development has been on Apple Silicon and
+macOS 26. The Intel slice compiles and links but has not been run on Intel hardware,
+and compatibility with every supported macOS version is not verified.
 
 ## Using it
 

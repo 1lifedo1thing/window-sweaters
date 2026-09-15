@@ -131,7 +131,7 @@ static void test_patterns(void) {
   assert(knit_pattern_for_app("Finder") == figma);
   assert(knit_pattern_for_app("Google Chrome") == figma);
   assert(knit_pattern_for_app("Unknown") == figma);
-  assert(knit_app_rule("Google Chrome")->color == 0xffedcc70); // app yarn stays
+  assert(knit_app_rule("Google Chrome")->color == 0xfff4f0e6); // app yarn stays
   assert(!knit_pattern_select("missing-chart"));
   assert(!knit_pattern_select(NULL));
   assert(!g_knit_pattern_by_app && g_chart_active == figma);
@@ -208,7 +208,7 @@ static void test_charts(const char* dir) {
   assert(g_charts[knit_chart_index("atelier-whatsapp")].solid_corners);
   assert(!g_charts[knit_chart_index("atelier-claude")].solid_corners);
   assert(g_charts[knit_chart_index("atelier-messages")].round_dots);
-  assert(g_charts[knit_chart_index("atelier-chrome")].corner_color == 0xffedcc70);
+  assert(g_charts[knit_chart_index("atelier-chrome")].corner_color == 0);
   assert(g_charts[knit_chart_index("atelier-spotify")].sculpted_yarn);
   write_png(dir, "atelier-spotify");
   assert(knit_charts_load(dir) == COLLECTION_COUNT);
@@ -216,8 +216,8 @@ static void test_charts(const char* dir) {
   remove_png(dir, "atelier-spotify");
   write_png(dir, "atelier-chrome");
   assert(knit_charts_load(dir) == COLLECTION_COUNT);
-  assert(g_charts[knit_chart_index("atelier-chrome")].solid_corners);
-  assert(g_charts[knit_chart_index("atelier-chrome")].corner_color == 0xffedcc70);
+  assert(!g_charts[knit_chart_index("atelier-chrome")].solid_corners);
+  assert(g_charts[knit_chart_index("atelier-chrome")].corner_color == 0);
   remove_png(dir, "atelier-chrome");
   write_png(dir, "atelier-whatsapp");
   assert(knit_charts_load(dir) == COLLECTION_COUNT);

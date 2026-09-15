@@ -2,7 +2,7 @@
 
 36 app sweaters, individually inspected on 14 September 2026. Each plate shows a 10-point border, a 4x enlargement using that same stitch geometry, and four enlarged corners. Detail views reuse the renderer and cached yarn; they are not photographs or larger-gauge swatches.
 
-This is a visual design review of the actual renderer, not a claim of perfect live behaviour in every app. The plates use a 10-point reference width; the app defaults to 12 points. Two sweaters use textured, equal corner patches: Chrome and WhatsApp. Notes, Calendar and Notion have continuous curved cuffs instead. The rest have patterned corners.
+This is a visual design review of the actual renderer, not a claim of perfect live behaviour in every app. The plates use a 10-point reference width; the app defaults to 12 points. WhatsApp uses textured, equal corner patches. Notes and Calendar have continuous curved cuffs instead. The rest have patterned corners.
 
 Review scope: all 36 individual plates at one reference window size. Automated coverage checks also exercise 1x/2x and varied radii. This is not visual certification of every window size or live app. Mitred seams remain visible on some complex motifs; Messages uses a flatter dot-preserving material.
 
@@ -13,16 +13,16 @@ Design rule: judge the 10-point border first. Use one clear pattern rhythm, app-
 | Page | App | Treatment |
 | --- | --- | --- |
 | 01 | [Finder](#01-finder) | Blue checks with aligned knitted corners |
-| 02 | [Microsoft Teams](#02-microsoft-teams) | Spacious two-colour knitted checks |
+| 02 | [Microsoft Teams](#02-microsoft-teams) | Soft porcelain zigzags on violet knit |
 | 03 | [Claude](#03-claude) | Cream stars on apricot wool, no inner trim |
-| 04 | [Codex](#04-codex) | Cream and pink chevrons, patterned corners |
+| 04 | [Codex](#04-codex) | Cream chevrons on blue knit, patterned corners |
 | 05 | [Spotify](#05-spotify) | Raised knitted checks, patterned corners |
-| 06 | [Notion](#06-notion) | Quiet ivory knit with a curved charcoal cuff |
+| 06 | [Notion](#06-notion) | Raised ivory and charcoal knitted checks |
 | 07 | [WhatsApp](#07-whatsapp) | Broad stripes with pink accents, green corners |
 | 08 | [Figma](#08-figma) | Playful colour blocks |
-| 09 | [Google Chrome](#09-google-chrome) | Colour blocks with small blue stitch dots |
+| 09 | [Google Chrome](#09-google-chrome) | Ivory knit with colourful checks |
 | 10 | [Paper](#10-paper) | Layered sheet motifs |
-| 11 | [ChatGPT](#11-chatgpt) | Cream and pink chevrons, patterned corners |
+| 11 | [ChatGPT](#11-chatgpt) | Cream chevrons on blue knit, patterned corners |
 | 12 | [Grok Bot](#12-grok-bot) | Framed stripes, matching knitted corners |
 | 13 | [Discord](#13-discord) | Mini checkerboard |
 | 14 | [Granola](#14-granola) | Grey and green stripes, patterned corners |
@@ -61,7 +61,7 @@ Keep: clear blue hierarchy and readable checks. Patterned corners are balanced; 
 
 **Palette:** Violet, porcelain.
 
-Refined: larger two-colour violet and porcelain checks replace the small three-tone gingham. Fitted repeats keep the corners patterned.
+The menu’s Zigzag repeat in violet and porcelain, with visible yarn and patterned corners.
 
 ![Microsoft Teams: window border, yarn detail and all four corners](collection/app-02.png)
 
@@ -75,9 +75,9 @@ Simplified: removed the pale rose inner trim that formed an angular corner line.
 
 ## 04 Codex
 
-**Palette:** Blue, cream, pink.
+**Palette:** Blue, cream.
 
-Keep: lively blue, cream and pink chevrons. No patches. Enlarged corners reveal cut motifs, so these are not seamless knitted turns.
+Blue knit with cream chevrons; the pink accent is removed. No patches. Enlarged corners reveal cut motifs, so these are not seamless knitted turns.
 
 ![Codex: window border, yarn detail and all four corners](collection/app-04.png)
 
@@ -93,7 +93,7 @@ Keep as the tactile reference: clear green-and-butter checks and rounded yarn. P
 
 **Palette:** Paper white, charcoal.
 
-Quiet everyday treatment: ivory knitted wool with a continuous charcoal cuff. Removed the outlined-square motifs and solid corner patches.
+Spotify’s raised knitted checks in paper white and charcoal, with the same stitch scale and patterned corners. No cuff or solid corner patches.
 
 ![Notion: window border, yarn detail and all four corners](collection/app-06.png)
 
@@ -115,9 +115,9 @@ Keep: mauve unifies the pastel blocks. Colour changes at the corners belong to t
 
 ## 09 Google Chrome
 
-**Palette:** Red, green, yellow, blue.
+**Palette:** Ivory, red, green, yellow, blue.
 
-Keep: red, green and yellow dominate, blue stays small. The blue marks read as knitted accents, not perfect circles. Yellow corners retained.
+Spacious checks on ivory yarn, with red, green and yellow checks and occasional blue. Repeats fit the window edges. The pattern continues around all four corners without solid patches.
 
 ![Google Chrome: window border, yarn detail and all four corners](collection/app-09.png)
 
@@ -131,7 +131,7 @@ Keep: readable white sheet motifs on soft blue yarn. No patches. Motifs are clip
 
 ## 11 ChatGPT
 
-**Palette:** Blue, cream, pink.
+**Palette:** Blue, cream.
 
 Keep: matches Codex, with visible yarn and no patches. Complex chevrons still meet at mitred seams rather than bending continuously.
 
