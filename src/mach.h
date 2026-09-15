@@ -2,7 +2,7 @@
 #include <mach/mach.h>
 #include <stdbool.h>
 
-#define BS_NAME "git.felix.borders"
+#define BS_NAME "com.saragordic.window-sweaters"
 
 struct mach_message {
   mach_msg_header_t header;

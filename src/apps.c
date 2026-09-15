@@ -70,7 +70,7 @@ static const char* k_default_conf =
   "# is a built-in chart or any file in the charts folder, without .png.\n"
   "# Personal rules take priority over the built-in app collection.\n"
   "#\n"
-  "# Edit, then pick \"Reload app colours\" from the menu.\n"
+  "# Edit, then restart Window Sweaters to load your changes.\n"
   "\n"
   "# 37 apps already have their own yarn and chart; see docs/COLLECTION.md.\n"
   "# Uncomment to customize:\n"

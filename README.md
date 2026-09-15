@@ -85,6 +85,11 @@ so its tint follows the menu bar's appearance.
 
 ## Current limitations
 
+Window Sweaters and [JankyBorders](https://github.com/FelixKratz/JankyBorders) can be
+installed side by side, but running both at once means two sets of borders on the same
+windows. Quit one before starting the other. Window Sweaters reads its own optional
+config from `~/.config/window-sweaters/sweatersrc` and never JankyBorders' `bordersrc`.
+
 This is an experimental desktop utility. Window tracking uses private SkyLight
 APIs, which may change between macOS releases. Borders deliberately hide during
 resizing and reappear when the window settles. Movement, stacking, display
