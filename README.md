@@ -34,9 +34,20 @@ If macOS asks for Accessibility access, enable Window Sweaters in **System Setti
 
 ## The sweaters
 
+**Custom sweaters for 37 apps, and counting!** Almost 40 little colourways, with colours picked by hand. These are just a few of my favourites:
+
 ![Eight apps shown in By App and Zigzag styles, with enlarged yarn details](docs/collection/styles-comparison.png)
 
-Some of my favourites, in By App and Zigzag. You can see the whole collection and close-up stitches in the [catalogue](docs/COLLECTION.md), or download the [By App PDF](docs/catalogues/Window-Sweaters-Catalogue.pdf) and [Zigzag PDF](docs/catalogues/Window-Sweaters-Zigzag-Catalogue.pdf).
+Shown above in By App and Zigzag. Here’s everyone we’ve knitted for so far:
+
+- **Apple:** Finder, Safari, Mail, Messages, Notes, Calendar, Reminders, Apple Music, Photos, Preview, Terminal.
+- **Work and notes:** Notion, Paper, Granola, Microsoft Teams, Slack, Zoom.
+- **Coding and AI:** Cursor, VS Code, Claude, ChatGPT, Codex, Grok Bot, Ghostty.
+- **Design:** Figma, Adobe Photoshop, Adobe Illustrator.
+- **Microsoft Office:** Word, Excel, PowerPoint, Outlook.
+- **More favourites:** Spotify, WhatsApp, Google Chrome, Firefox, Telegram, Discord.
+
+See every sweater and its close-up stitches in the [catalogue](docs/COLLECTION.md), or download the [By App PDF](docs/catalogues/Window-Sweaters-Catalogue.pdf) and [Zigzag PDF](docs/catalogues/Window-Sweaters-Zigzag-Catalogue.pdf).
 
 The app colours are picked by hand, not read from your app icons. Apps without their own sweater still get a border in a colour chosen from their name, so it stays the same every time.
 
