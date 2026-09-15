@@ -38,7 +38,7 @@ If macOS asks for Accessibility access, enable Window Sweaters in **System Setti
 
 Some of my favourites, in By App and Zigzag. You can see the whole collection and close-up stitches in the [catalogue](docs/COLLECTION.md), or download the [By App PDF](docs/catalogues/Window-Sweaters-Catalogue.pdf) and [Zigzag PDF](docs/catalogues/Window-Sweaters-Zigzag-Catalogue.pdf).
 
-The app colours are picked by hand. Apps without their own sweater still get a border with an automatically chosen colour.
+The app colours are picked by hand, not read from your app icons. Apps without their own sweater still get a border in a colour chosen from their name, so it stays the same every time.
 
 ## A little work in progress
 
@@ -77,6 +77,8 @@ Claude = #D58561 atelier-claude
 ```
 
 Names match app-name prefixes, ignoring capitalisation; the longest match wins. You can also put your own PNG charts in the charts folder to replace built-in patterns.
+
+If you like setting things up from the command line, Window Sweaters also runs an optional shell script at startup, if you have one at `~/.config/window-sweaters/sweatersrc` or `~/.sweatersrc`.
 
 ## Contributing
 
