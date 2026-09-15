@@ -13,7 +13,7 @@ Procedurally rendered yarn, app-inspired colourways, and a little warmth for you
 
 ## Install
 
-Download `Window Sweaters.zip` from [Releases](../../releases), unzip it, and move
+Download `WindowSweaters-<version>.zip` from [Releases](../../releases), unzip it, and move
 **Window Sweaters.app** to your Applications folder.
 
 The app is ad-hoc signed rather than notarized by Apple, so macOS blocks it on the
