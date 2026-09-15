@@ -13,11 +13,11 @@ With [Homebrew](https://brew.sh):
 
 ```sh
 brew trust saragordic/tap
-brew install --cask --no-quarantine saragordic/tap/window-sweaters
+brew install --cask saragordic/tap/window-sweaters
 ```
 
-That skips the security prompt described below. Homebrew requires the trust step
-for any third-party tap.
+This opens with no security prompt at all. Homebrew requires the trust step for
+any third-party tap.
 
 Otherwise download `WindowSweaters-<version>.zip` from [Releases](../../releases),
 unzip it, and move **Window Sweaters.app** to your Applications folder.
