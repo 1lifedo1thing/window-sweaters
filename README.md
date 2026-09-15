@@ -3,12 +3,6 @@
 A small native macOS menu-bar app that dresses your windows in knitted borders.
 Procedurally rendered yarn, app-inspired colourways, and a little warmth for your desktop.
 
-> **Built on [JankyBorders](https://github.com/FelixKratz/JankyBorders) by Felix Kratz.**
-> Window Sweaters is a derivative work. The window tracking and border engine come from
-> JankyBorders; this project adds the knit renderer, app colourways and menu-bar controls.
-> It stays under the same [GNU GPL v3](LICENSE) licence. Full attribution in
-> [NOTICE.md](NOTICE.md).
-
 ![A selection of window sweaters](docs/collection/collection-1.png)
 
 ## Install
