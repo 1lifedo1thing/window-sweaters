@@ -16,8 +16,9 @@ brew trust saragordic/tap
 brew install --cask saragordic/tap/window-sweaters
 ```
 
-This opens with no security prompt at all. Homebrew requires the trust step for
-any third-party tap.
+This opens with no security prompt, including with a custom `--appdir`. Homebrew
+requires the trust step for any third-party tap. If macOS does still ask, follow
+the approval steps below.
 
 Otherwise download `WindowSweaters-<version>.zip` from [Releases](../../releases),
 unzip it, and move **Window Sweaters.app** to your Applications folder.
