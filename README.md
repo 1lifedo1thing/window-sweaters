@@ -3,7 +3,7 @@
 A small native macOS menu-bar app that dresses your windows in knitted borders.
 Procedurally rendered yarn, app-inspired colourways, and a little warmth for your desktop.
 
-![Eight favourite apps in By App and Zigzag styles](docs/collection/styles-comparison.png)
+![Four overlapping windows edged with knitted borders in green, blue and rust colourways](docs/hero.jpg)
 
 ## Install
 
@@ -54,7 +54,10 @@ Local builds are ad-hoc signed, not Developer ID signed or notarized.
 
 ## Sweaters
 
-The [collection catalogue](docs/COLLECTION.md) shows all 36 app colourways and
+![Eight apps shown in By App and Zigzag styles, with enlarged yarn details](docs/collection/styles-comparison.png)
+
+Eight favourite apps, each shown in **By App** and **Zigzag**, straight from the
+renderer at 12 pt. The [collection catalogue](docs/COLLECTION.md) shows all 36 app colourways and
 close-up yarn details. Unknown apps receive a consistent fallback colour; the
 app does not extract colours from icons. App names identify the inspiration and
 do not imply affiliation or endorsement.
