@@ -14,11 +14,13 @@ DEPLOY = -mmacosx-version-min=13.0
 
 all: | bin
 	clang $(ARCHS) $(DEPLOY) -O3 -g -Isrc -fobjc-arc -c src/menubar.m -o bin/menubar.o
-	clang $(ARCHS) $(DEPLOY) -std=c99 -O3 -g -Isrc $(CFILES) bin/menubar.o -o bin/borders $(LIBS)
+	clang $(ARCHS) $(DEPLOY) -O3 -g -Isrc -fobjc-arc -c src/autoyarn.m -o bin/autoyarn.o
+	clang $(ARCHS) $(DEPLOY) -std=c99 -O3 -g -Isrc $(CFILES) bin/menubar.o bin/autoyarn.o -o bin/borders $(LIBS)
 
 debug: | bin
 	clang -O0 -g -Isrc -fobjc-arc -c src/menubar.m -o bin/menubar.o
-	clang -std=c99 -O0 -g -DDEBUG -Isrc $(CFILES) bin/menubar.o -o bin/debug $(LIBS)
+	clang -O0 -g -Isrc -fobjc-arc -c src/autoyarn.m -o bin/autoyarn.o
+	clang -std=c99 -O0 -g -DDEBUG -Isrc $(CFILES) bin/menubar.o bin/autoyarn.o -o bin/debug $(LIBS)
 
 bin:
 	mkdir bin
@@ -43,6 +45,8 @@ test: bin/render-test
 	bin/ax-focus-test
 	clang -std=c99 -O1 -g -fobjc-arc -fsanitize=address,undefined -Isrc tests/menu.m -framework Cocoa -o bin/menu-test
 	bin/menu-test
+	clang -O1 -g -fobjc-arc -fsanitize=address,undefined -Isrc tests/autoyarn.m src/knit.c src/chart.c src/apps.c -framework Cocoa -framework ApplicationServices -o bin/autoyarn-test
+	bin/autoyarn-test
 
 # Optional native integration probe: build only. Running it creates its own
 # temporary window; keep it out of unattended unit tests.

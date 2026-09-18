@@ -49,7 +49,9 @@ Shown above in By App and Zigzag. Here’s everyone we’ve knitted for so far:
 
 See every sweater and its close-up stitches in the [catalogue](docs/COLLECTION.md), or download the [By App PDF](docs/catalogues/Window-Sweaters-Catalogue.pdf) and [Zigzag PDF](docs/catalogues/Window-Sweaters-Zigzag-Catalogue.pdf).
 
-The app colours are picked by hand, not read from your app icons. Apps without their own sweater still get a border in a colour chosen from their name, so it stays the same every time.
+The 37 custom sweaters keep their hand-picked colours and patterns. Other apps borrow colours from their own icons, softened into yarn, and get a two-colour zigzag, picnic or twinkle sweater in **By App** mode. The pattern stays the same for each app. If an icon has no usable colour, the app keeps a stable colour chosen from its name.
+
+Icons are sampled locally in the background when needed. While the colour is being prepared, the border uses its usual fallback. Choosing a shared pattern keeps that pattern and its contrast yarns, with each app’s own base colour.
 
 ## A little work in progress
 

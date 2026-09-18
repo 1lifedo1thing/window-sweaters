@@ -1,4 +1,5 @@
 #include "border.h"
+#include "misc/autoyarn.h"
 #include "hashtable.h"
 #include "events.h"
 #include "reconcile.h"
@@ -68,6 +69,21 @@ static TABLE_HASH_FUNC(hash_blacklist) {
 
 static TABLE_COMPARE_FUNC(cmp_blacklist) {
   return strcmp((char*)key_a, (char*)key_b) == 0;
+}
+
+// Icon jobs never retain border pointers: the target may close before the
+// answer arrives. Resolve surviving owners on the main thread instead.
+void knit_auto_yarn_ready(pid_t pid) {
+  assert(pthread_main_np());
+  for (int i = 0; i < g_windows.capacity; i++) {
+    for (struct bucket* b = g_windows.buckets[i]; b; b = b->next) {
+      struct border* border = b->value;
+      if (border && border->owner_pid == pid) {
+        border->needs_redraw = true;
+        border_update(border, true);
+      }
+    }
+  }
 }
 
 static void message_handler(void* data, uint32_t len) {

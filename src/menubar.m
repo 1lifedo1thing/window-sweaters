@@ -21,6 +21,7 @@ static bool knit_menu_chart_valid(int index) {
 
 static bool knit_menu_chart_selectable(int index) {
   if (!knit_menu_chart_valid(index) || g_charts[index].h > 14) return false;
+  if (g_charts[index].generated) return false;  // app-icon charts are not choices
   const struct knit_chart* chart = &g_charts[index];
   uint32_t yarns[16];
   int count = 0;

@@ -1,4 +1,12 @@
 #include "border.h"
+#include "misc/autoyarn.h"
+// A weak default so the test targets, which compile this file without the
+// ObjC module, still link. src/autoyarn.m provides the real implementation
+// and overrides this at link time in the app build.
+__attribute__((weak))
+bool knit_auto_yarn(const char* app, pid_t pid, uint32_t* yarn, int* chart) {
+  (void)app; (void)pid; (void)yarn; (void)chart; return false;
+}
 #include "misc/apps.h"
 #include "misc/chart.h"
 #include <math.h>
@@ -106,6 +114,14 @@ static void border_draw(struct border* border, CGRect frame, struct settings* se
     const struct app_rule* rule = knit_app_rule(border->app);
     if (rule) {
       yarn = rule->color;
+    } else {
+      // No hand-picked sweater: borrow the app's own colour from its icon
+      // rather than hashing its name into an arbitrary one.
+      uint32_t auto_yarn; int auto_chart;
+      if (knit_auto_yarn(border->app, border->owner_pid, &auto_yarn, &auto_chart)) {
+        yarn = auto_yarn;
+        if (auto_chart >= 0) chart = auto_chart;
+      }
     }
 
     knit_draw(border->context,

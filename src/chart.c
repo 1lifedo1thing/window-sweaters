@@ -333,7 +333,10 @@ static int chart_order(const struct dirent** a, const struct dirent** b) {
   return strcmp((*a)->d_name, (*b)->d_name);
 }
 
+unsigned g_charts_generation;
+
 int knit_charts_load(const char* dir) {
+  g_charts_generation++;
   char active_name[64] = {0};
   if (g_chart_active >= 0 && g_chart_active < g_chart_count)
     snprintf(active_name, sizeof active_name, "%s", g_charts[g_chart_active].name);

@@ -126,6 +126,12 @@ int main(void) {
     assert(knit_menu_chart_selectable(budget));
     chart_pixels[excessive][0] = 0; // Base yarn also counts against the limit.
     assert(!knit_menu_chart_selectable(excessive));
+    // A chart built at runtime from an app icon is not a pattern the user can
+    // pick, so it must never reach the menu however ordinary it otherwise looks.
+    int generated = add_chart("auto-Numbers", 6);
+    assert(knit_menu_chart_selectable(generated));   // ordinary in every other way
+    g_charts[generated].generated = true;
+    assert(!knit_menu_chart_selectable(generated));
 
     KnitMenu* controller = [KnitMenu new];
     NSMenu* menu = [[NSMenu alloc] initWithTitle:@"Test"];
@@ -143,6 +149,8 @@ int main(void) {
     NSMenu* customs = submenu(patterns, @"Custom Patterns");
     assert([customs itemWithTitle:@"My Flowers"] && ![customs itemWithTitle:@"Too Tall"]);
     assert(![customs itemWithTitle:@"Empty"] && ![customs itemWithTitle:@"Invisible"]);
+    for (NSMenuItem* item in customs.itemArray)
+      assert([item.title rangeOfString:@"Auto" options:NSCaseInsensitiveSearch].location == NSNotFound);
     assert(![customs itemWithTitle:@"Too Many Yarns"] && ![customs itemWithTitle:@"Atelier Finder"]);
     NSMenu* widths = submenu(menu, @"Border Width");
     assert([widths itemWithTitle:@"Custom · 10 pt"].state == NSControlStateValueOn);

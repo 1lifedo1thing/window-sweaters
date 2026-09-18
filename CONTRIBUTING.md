@@ -50,3 +50,21 @@ Confirm with `vtool -show-build` that both slices report the intended `minos`.
 Distribution signing and notarization are not configured by the local build.
 Publish source with the license and attribution; do not upload local logs,
 archives, personal settings, build products or developer signing credentials.
+
+## Automatic colourways
+
+`src/autoyarn.m` handles apps without built-in or personal rules. The window
+owner PID selects the icon; decoding and colour extraction run on a serial
+worker. Cache updates, chart generation and redraw callbacks run on the main
+thread. Never capture a border pointer in an icon job: its window may close
+before the job completes.
+
+`tests/autoyarn.m` supplies synthetic icons to the same decoder and cache. It
+checks contrast after softening, transparency, asynchronous completion, rule
+precedence, mode changes, reloads, relaunches and cache/table limits without
+requiring running apps. The native menu test checks generated-chart filtering.
+
+Automatic sweaters use two yarns. Pattern shape is a stable hash of the app
+name, independent of icon colour. Colourless icons retain the existing name-
+based fallback. The cache holds 64 recent processes; a full chart table can
+retain the icon colour without a motif until chart space is available.

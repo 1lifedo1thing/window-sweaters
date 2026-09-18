@@ -90,6 +90,7 @@ bool windows_window_create(struct table* windows, uint32_t wid, uint64_t sid) {
           border->radius = radius;
           border->inner_radius = radius + 1;
           border->target_wid = wid;
+          border->owner_pid = pid;
           snprintf(border->app, sizeof border->app, "%s", pid_name_buffer);
           border->sid = sid;
           border->metadata_dirty = true;
